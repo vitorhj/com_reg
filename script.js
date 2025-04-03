@@ -11,7 +11,7 @@ document.getElementById('calcular').addEventListener('click', function() {
 
     // Validação de inputs
     if (!validarInscricaoImobiliaria(inscricaoImobiliaria)) {
-        mostrarErro('Inscrição Imobiliária inválida. Use o formato 000.000.000.000');
+        mostrarErro('Inscrição Imobiliária inválida. Use o formato 000.000.00.0000');
         return;
     }
 
@@ -79,7 +79,7 @@ document.getElementById('imprimir').addEventListener('click', function() {
 });
 
 function validarInscricaoImobiliaria(inscricao) {
-    const regex = /^\d{3}\.\d{3}\.\d{3}\.\d{3}$/;
+    const regex = /^\d{3}\.\d{3}\.\d{2}\.\d{4}$/;
     return regex.test(inscricao);
 }
 
