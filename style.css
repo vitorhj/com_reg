@@ -1,0 +1,65 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+    font-size: 0.8rem;
+    font-weight: 300;
+    color: #333;
+    }
+    
+        .container {
+    max-width: 900px;
+    }
+    
+        h1, h2 {
+    font-weight: 700;
+    color: #000;
+    font-size: 1.1rem;
+    }
+    
+    h1 {
+    font-size: 1.5rem;
+    }
+        
+    .card-text {
+    color: #555;
+    }
+      
+    
+    .cabecalho img {
+    max-width: 50%;
+    }
+            
+    .form-label {
+    font-size: 0.75rem;
+    }
+    
+    .form-control, .form-select {
+    font-size: 0.75rem;
+    padding: 0.375rem 0.75rem;
+    }
+    
+    .card-body {
+    padding: 1rem;
+    }
+    
+    @media print {
+    @page {
+    margin: 0; /* Remove margens da página */
+    }
+    
+    .d-grid, .card:not(#resultado) {
+    display: none; /* Oculta os botões e os outros cards */
+    }
+    
+    #resultado {
+    display: block; /* Exibe o card de resultado */
+    }
+       
+    .card {
+    border: none; /* Remove bordas dos cards */
+    }
+      
+    body {
+    background-color: transparent; /* Remove cor de fundo */
+    }
+    }
