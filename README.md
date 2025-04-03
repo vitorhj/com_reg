@@ -1,1 +1,1 @@
-# com_reg
+# Calculadora regularização LC429/23
