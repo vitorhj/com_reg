@@ -206,10 +206,13 @@ function exibirResultado(inscricaoImobiliaria, fatoresCorrecao, areasInfracao, B
         <p><strong>Descrição dos fatores de correção:</strong><br>${descricaoFatores}</p>
         <p><strong>Descrição das áreas de infração:</strong><br>${descricaoAreas}</p>
         <p><strong>Memorial de cálculo:</strong></p>
+        <p>Passo 1) Cálculo da base da multa compensatória (BMC)</p>
         <p>BMC = VMQ x FT x FV x FS x FA x FI x FU x FL x UFM</p>
-        <p>BMC = ${fatoresCorrecao.vmq.valor.toFixed(2)} x ${fatoresCorrecao.ft.valor.toFixed(2)} x ${fatoresCorrecao.fv.valor.toFixed(2)} x ${fatoresCorrecao.fs.valor.toFixed(2)} x ${fatoresCorrecao.fa.valor.toFixed(2)} x ${fatoresCorrecao.fi.valor.toFixed(2)} x ${fatoresCorrecao.fu.valor.toFixed(2)} x ${fatoresCorrecao.fl.valor.toFixed(2)} x ${BMC.toFixed(2)}</p>
+        <p>BMC = ${fatoresCorrecao.vmq.valor.toFixed(2)} x ${fatoresCorrecao.ft.valor.toFixed(2)} x ${fatoresCorrecao.fv.valor.toFixed(2)} x ${fatoresCorrecao.fs.valor.toFixed(2)} x ${fatoresCorrecao.fa.valor.toFixed(2)} x ${fatoresCorrecao.fi.valor.toFixed(2)} x ${fatoresCorrecao.fu.valor.toFixed(2)} x ${fatoresCorrecao.fl.valor.toFixed(2)} x 241,30 = ${BMC.toFixed(2)}</p>
+        <p>Passo 2) Cálculo do valor da multa compensatória (VMC)</p>
+        <p>VMC = BMC x Somatório (Ai x i%)</p>
         <p>VMC = ${BMC.toFixed(2)} x [(${areasInfracao.pavimentosExcedidos.toFixed(2)} x 0.4) + (${areasInfracao.areaExtrapolaCA.toFixed(2)} x 0.1) + (${areasInfracao.areaRecuoFrontal.toFixed(2)} x 0.2) + (${areasInfracao.areaRecuoLateralFundos.toFixed(2)} x 0.15) + (${areasInfracao.areaVagasGaragem.toFixed(2)} x 0.1) + (${areasInfracao.areaPermeavelFaltante.toFixed(2)} x 0.1) + (${areasInfracao.areaLazerFaltante.toFixed(2)} x 0.05) + (${areasInfracao.areaExtrapolaTaxaOcupacao.toFixed(2)} x 0.15)] = ${VMC.toFixed(2)}</p>
-        <p>UFM = Unidade Fiscal Municipal = R$241,30 (DECRETO Nº 13.426, DE 18 DE NOVEMBRO DE 2024).</p>
+        <p>Observação: UFM = Unidade Fiscal Municipal = R$241,30 (DECRETO Nº 13.426, DE 18 DE NOVEMBRO DE 2024).</p>
         <p><strong>Valor da multa:</strong></p>
         <p style="font-size: 1.1em; font-weight: bold;">R$ ${valorMultaFormatado}</p>
     `;
