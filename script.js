@@ -11,7 +11,7 @@ document.getElementById('calcular').addEventListener('click', function() {
 
     // Validação de inputs
     if (!validarInscricaoImobiliaria(inscricaoImobiliaria)) {
-        mostrarErro('Inscrição Imobiliária inválida. Use o formato 000.000.00.0000');
+        mostrarErro('Inscrição Imobiliária inválida. Use o formato 000.000.00.0000 (Inscrição reduzida)');
         return;
     }
 
